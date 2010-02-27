@@ -66,7 +66,7 @@ Finally, you can start enjoying the WebGAC.
 4. The reference should be added to your project, and it should be ready to use!
 
 ## Software License
-> Copyright (c) 2007-2010 Paul Jones <pauljones23@gmail.com>
+> Copyright (c) 2007-2010 Paul Jones &lt;pauljones23@gmail.com>
 > 
 > Permission is hereby granted, free of charge, to any person
 > obtaining a copy of this software and associated documentation
