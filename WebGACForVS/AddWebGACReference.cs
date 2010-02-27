@@ -36,10 +36,7 @@ namespace WebGACForVS {
         this.Text = "Browse WebGAC";
       }
 
-      mLoadThread = new Thread(Thread_AddReferences);
-      mLoadThread.Start();
-
-      addButton.Enabled = false;
+      DoLoad();
     }
 
     private void cancelButton_Click(object sender, EventArgs e) {
@@ -123,6 +120,17 @@ namespace WebGACForVS {
       }
     }
 
+    private void DoLoad()
+    {
+      referencesTreeView.Nodes.Clear();
+      loadingLabel.Visible = true;
+
+      mLoadThread = new Thread(Thread_AddReferences);
+      mLoadThread.Start();
+
+      addButton.Enabled = false;
+    }
+
     private delegate void AssemblyWorkerDelegate(AssemblyNode pNode);
     private void Thread_LoadAssemblyVersions(AssemblyNode pNode) {
       try {
@@ -179,6 +187,15 @@ namespace WebGACForVS {
     private void referencesTreeView_AfterSelect(object sender, TreeViewEventArgs e) {
       if (addButton.Visible) {
         addButton.Enabled = (referencesTreeView.SelectedNode is VersionNode);
+      }
+    }
+
+    private void uploadButton_Click(object sender, EventArgs e)
+    {
+      UploadAssembly ua = new UploadAssembly(mGac);
+      if (ua.ShowDialog(this) == DialogResult.OK)
+      {
+        DoLoad();
       }
     }
   }

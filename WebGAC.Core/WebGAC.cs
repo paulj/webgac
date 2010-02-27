@@ -377,7 +377,7 @@ namespace WebGAC.Core {
     }
   }
 
-  internal class AssemblyInfo {
+  public class AssemblyInfo {
     private readonly NameValueCollection mDetails;
     private readonly Version mVersion;
     

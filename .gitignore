@@ -6,3 +6,4 @@ obj/
 *.suo
 _ReSharper.*
 *.resharper.user
+*.csproj.user

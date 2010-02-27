@@ -27,6 +27,7 @@ namespace WebGACForVS {
       this.addButton = new System.Windows.Forms.Button();
       this.referencesTreeView = new System.Windows.Forms.TreeView();
       this.loadingLabel = new System.Windows.Forms.Label();
+      this.uploadButton = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // cancelButton
@@ -75,11 +76,22 @@ namespace WebGACForVS {
       this.loadingLabel.TabIndex = 3;
       this.loadingLabel.Text = "Loading...";
       // 
+      // uploadButton
+      // 
+      this.uploadButton.Location = new System.Drawing.Point(166, 229);
+      this.uploadButton.Name = "uploadButton";
+      this.uploadButton.Size = new System.Drawing.Size(75, 23);
+      this.uploadButton.TabIndex = 4;
+      this.uploadButton.Text = "Upload...";
+      this.uploadButton.UseVisualStyleBackColor = true;
+      this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
+      // 
       // AddWebGACReference
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(431, 264);
+      this.Controls.Add(this.uploadButton);
       this.Controls.Add(this.loadingLabel);
       this.Controls.Add(this.referencesTreeView);
       this.Controls.Add(this.addButton);
@@ -101,5 +113,6 @@ namespace WebGACForVS {
     private System.Windows.Forms.Button addButton;
     private System.Windows.Forms.TreeView referencesTreeView;
     private System.Windows.Forms.Label loadingLabel;
+    private System.Windows.Forms.Button uploadButton;
   }
 }
