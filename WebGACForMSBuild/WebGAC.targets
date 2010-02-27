@@ -1,0 +1,124 @@
+<Project DefaultTargets="Build" InitialTargets="_CheckForInvalidConfigurationAndPlatform" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Tasks used to peform the WebGAC functions -->
+  <UsingTask TaskName="AddWebGACAssemblySearchPaths" AssemblyFile="$(MSBuildExtensionsPath)\WebGAC\WebGAC.MSBuild.dll"/>
+  <UsingTask TaskName="StoreInLocalWebGAC" AssemblyFile="$(MSBuildExtensionsPath)\WebGAC\WebGAC.MSBuild.dll"/>
+  <UsingTask TaskName="StoreInRemoteWebGAC" AssemblyFile="$(MSBuildExtensionsPath)\WebGAC\WebGAC.MSBuild.dll"/>
+  <UsingTask TaskName="SupplyCreds" AssemblyFile="$(MSBuildExtensionsPath)\WebGAC\WebGAC.MSBuild.dll"/>
+  
+  <!-- Import user configuration files -->
+  <Import Project="$(APPDATA)\WebGAC\WebGAC.targets.user"/>
+  
+  <!--
+      ***********************************************************************************************
+      ***********************************************************************************************
+                                                                  SupplyCreds Updates Section
+      ***********************************************************************************************
+      ***********************************************************************************************
+    -->
+  <Target Name="SupplyWebGACCredentials">
+    <SupplyCreds />
+  </Target>
+  
+  
+  <!--
+      ***********************************************************************************************
+      ***********************************************************************************************
+                                                                  Resolve Assembly Paths Section
+      ***********************************************************************************************
+      ***********************************************************************************************
+    -->
+
+  <!-- Augment the search paths with the WebGAC -->
+  <PropertyGroup>
+    <AssemblySearchPaths>
+      {CandidateAssemblyFiles};
+      $(ReferencePath);
+      {HintPathFromItem};
+      {TargetFrameworkDirectory};
+      {Registry:$(FrameworkRegistryBase),$(TargetFrameworkVersion),$(AssemblyFoldersSuffix)$(AssemblyFoldersExConditions)};
+      {AssemblyFolders};
+      {GAC};
+      {WebGAC};
+      {RawFileName};
+      $(OutputPath)
+    </AssemblySearchPaths> 
+  </PropertyGroup>
+
+  <!-- Add the WebGAC resolution as a dependency of the main assembly resolution -->
+  <PropertyGroup>
+    <!-- 
+      GetFrameworkPaths;
+      GetReferenceAssemblyPaths;
+      PrepareForBuild;
+    -->
+    <ResolveAssemblyReferencesDependsOn>
+      $(ResolveAssemblyReferencesDependsOn);
+      AddWebGACAssemblySearchPaths
+    </ResolveAssemblyReferencesDependsOn>
+  </PropertyGroup>
+
+  <!-- The WebGAC resolution target  -->
+  <Target Name="AddWebGACAssemblySearchPaths">
+    <AddWebGACAssemblySearchPaths 
+        Assemblies="@(Reference)"
+        Paths="$(AssemblySearchPaths)"
+        PrimaryConfiguration="$(Configuration)"
+        AllConfigurations="Debug;Release">
+      <Output TaskParameter="Paths" PropertyName="AssemblySearchPaths"/>
+    </AddWebGACAssemblySearchPaths>
+  </Target>
+  
+  
+  <!--
+      ***********************************************************************************************
+      ***********************************************************************************************
+                                                                  Install Local Section
+      ***********************************************************************************************
+      ***********************************************************************************************
+    -->
+  
+  <PropertyGroup>
+    <InstallLocalDependsOn>
+      Build;
+      StoreLocalWebGAC
+    </InstallLocalDependsOn>
+  </PropertyGroup>
+  <Target Name="InstallLocal" Condition=" '$(_InvalidConfigurationWarning)' != 'true' " DependsOnTargets="$(InstallLocalDependsOn)">
+  </Target>
+  
+  <!-- Pre-targets -->
+  <Target Name="StoreLocalWebGAC">
+    <StoreInLocalWebGAC AssemblyItem="@(MainAssembly)" Configuration="$(Configuration)"/>
+  </Target>
+  
+  
+  <!--
+      ***********************************************************************************************
+      ***********************************************************************************************
+                                                                  Deploy Remote Section
+      ***********************************************************************************************
+      ***********************************************************************************************
+    -->
+
+  <Target Name="RequiresTargetRepository">
+    <Error Text="Property TargetWebGACRepository must be set" Condition="$(TargetWebGACRepository) == ''" />
+  </Target>
+  
+  <PropertyGroup>
+    <DeployRemoteDependsOn>
+      RequiresTargetRepository;
+      Build;
+      StoreLocalWebGAC
+    </DeployRemoteDependsOn>
+  </PropertyGroup>
+  <!-- The WebGAC store target  -->
+  <Target Name="DeployRemote"
+          Condition=" '$(_InvalidConfigurationWarning)' != 'true'"
+          DependsOnTargets="$(DeployRemoteDependsOn)">
+    <StoreInRemoteWebGAC 
+        AssemblyItem="@(MainAssembly)"
+        Repository="$(TargetWebGACRepository)"
+        Configuration="$(Configuration)">
+    </StoreInRemoteWebGAC>
+  </Target>
+</Project>
