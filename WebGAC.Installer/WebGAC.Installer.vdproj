@@ -129,26 +129,32 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_DC2BC6BCDB5C7002DC81A03513F42D86"
-        "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DC2BC6BCDB5C7002DC81A03513F42D86"
-        "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E9485CF398CCA1F376EFCEE884BF0911"
         "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
+        "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
+        "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -191,12 +197,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_73BF86DADAFCB5C110AA88E78D0FC03C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DC2BC6BCDB5C7002DC81A03513F42D86"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -590,37 +590,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DC2BC6BCDB5C7002DC81A03513F42D86"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:WebGAC.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_DC2BC6BCDB5C7002DC81A03513F42D86"
-                    {
-                    "Name" = "8:WebGAC.Core.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:WebGAC.Core.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_97728C6831DF4A3AB0258AC233397D3A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E9485CF398CCA1F376EFCEE884BF0911"
             {
             "AssemblyRegister" = "3:1"
@@ -649,6 +618,37 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FB1D0E601B28CBE43309B4EFA7439B73"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:WebGAC.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FB1D0E601B28CBE43309B4EFA7439B73"
+                    {
+                    "Name" = "8:WebGAC.Core.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:WebGAC.Core.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_97728C6831DF4A3AB0258AC233397D3A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -753,18 +753,18 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:WebGAC"
-        "ProductCode" = "8:{F3B78570-4E75-43E6-AAC2-9051653C971E}"
-        "PackageCode" = "8:{09935E9E-3B11-496B-9280-3E65D31E2A92}"
+        "ProductCode" = "8:{09F27944-8FA6-4A33-BCBA-D714F3BC95C5}"
+        "PackageCode" = "8:{BD03EFC4-0A0E-45FA-8752-06FD281998EA}"
         "UpgradeCode" = "8:{64E45243-C2D7-47ED-B57A-DB13F7B9A861}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.10.0227"
+        "ProductVersion" = "8:1.10.0304"
         "Manufacturer" = "8:Default Company Name"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:WebGAC 20100227"
+        "Title" = "8:WebGAC 20100304"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Paul Jones"
         "Keywords" = "8:"
@@ -884,7 +884,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:C:\\Program Files\\MSBuild\\WebGAC\\WebGAC.targets"
+                                                                    "Value" = "8:[ProgramFilesFolder]MSBuild\\WebGAC\\WebGAC.targets"
                                                                     }
                                                                 }
                                                             }
