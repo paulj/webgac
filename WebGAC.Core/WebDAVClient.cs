@@ -473,6 +473,11 @@ namespace WebGAC.Core {
     }
 
     private bool GetAuthentication(Uri pUri, string pAuthHeader, bool isFirst) {
+      // Sometimes we don't get an auth header. So in those cases, there isn't anything we can do
+      if (pAuthHeader == null) {
+        return false;
+      }
+
       string[] parts = pAuthHeader.Split(new char[] { ' ' }, 2);
       string authType = parts[0];
       NameValueCollection authParams = new NameValueCollection();
