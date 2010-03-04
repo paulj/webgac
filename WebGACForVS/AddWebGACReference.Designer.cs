@@ -78,6 +78,7 @@ namespace WebGACForVS {
       // 
       // uploadButton
       // 
+      this.uploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
       this.uploadButton.Location = new System.Drawing.Point(166, 229);
       this.uploadButton.Name = "uploadButton";
       this.uploadButton.Size = new System.Drawing.Size(75, 23);
