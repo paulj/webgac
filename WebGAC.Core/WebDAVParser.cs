@@ -13,13 +13,14 @@ namespace WebGAC.Core {
         throw new ArgumentException("Base must start and end with / - Provided: " + pBase);
       }
 
+      string returnedBase = GetReturnedBasePath(pDoc);
       XmlNodeList list = pDoc.SelectNodes("/D:multistatus/D:response/D:propstat/D:prop/D:resourcetype/D:collection/../../../../D:href", GetNamespaceManager(pDoc));
       List<string> result = new List<string>();
 
       foreach (XmlNode node in list) {
         string path = node.InnerXml;
-        if (path.StartsWith(pBase)) {
-          string remainingPath = path.Substring(pBase.Length);
+        if (path.StartsWith(returnedBase)) {
+          string remainingPath = path.Substring(returnedBase.Length);
 
           if (remainingPath.Length > 0) {
             result.Add(remainingPath);
@@ -35,6 +36,7 @@ namespace WebGAC.Core {
         throw new ArgumentException("Base must start and end with / - Provided: " + pBase);
       }
 
+      string returnedBase = GetReturnedBasePath(pDoc);
       XmlNodeList list =
         pDoc.SelectNodes(
           "/D:multistatus/D:response/D:propstat/D:prop/D:resourcetype[not(D:collection)]/../../../D:href",
@@ -43,8 +45,8 @@ namespace WebGAC.Core {
 
       foreach (XmlNode node in list) {
         string path = node.InnerXml;
-        if (path.StartsWith(pBase)) {
-          string remainingPath = path.Substring(pBase.Length);
+        if (path.StartsWith(returnedBase)) {
+          string remainingPath = path.Substring(returnedBase.Length);
 
           if (remainingPath.Length > 0) {
             result.Add(remainingPath);
@@ -60,6 +62,14 @@ namespace WebGAC.Core {
       while (reader.Read()) {
         
       }
+    }
+
+    protected string GetReturnedBasePath(XmlDocument doc) {
+      XmlNode hrefNode =
+        doc.SelectSingleNode(
+          "/D:multistatus/D:response/D:href",
+          GetNamespaceManager(doc));
+      return hrefNode.InnerText;
     }
 
     protected XmlElement[] ParseMultiStatusResponses(XmlDocument pDoc) {

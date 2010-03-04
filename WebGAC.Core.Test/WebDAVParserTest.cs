@@ -16,32 +16,42 @@ namespace WebGAC.Core.Test {
 
     [Test]
     public void ShouldReturnValidListOfDirectoriesFromResponseWithValidProperties() {
-      XmlDocument doc = new XmlDocument();
-      doc.LoadXml(sValidPropertyListWithOneDir);
-
-      string[] result = mParser.ParsePropFindResponseForDirectories(doc, "/webgac/");
-      Assert.AreEqual(1, result.Length);
-      Assert.AreEqual("test/", result[0]);
+      ForEachFormat(sValidPropertyListWithOneDir, delegate(XmlDocument doc) {
+        string[] result = mParser.ParsePropFindResponseForDirectories(doc, "/webgac/");
+        Assert.AreEqual(1, result.Length);
+        Assert.AreEqual("test/", result[0]);
+      });
     }
 
     [Test]
-    public void ShouldReturnValidListOfDirectoriesFromResponseWithValidPropertiesInSubDir() {
-      XmlDocument doc = new XmlDocument();
-      doc.LoadXml(sValidPropertyListWithOneDir);
-
-      string[] result = mParser.ParsePropFindResponseForDirectories(doc, "/webgac/test");
-      Assert.AreEqual(0, result.Length);
+    public void ShouldReturnEmptyListOfDirectoriesFromResponseWithNoListedDirectories() {
+      ForEachFormat(sValidSubDirPropertyListWithNoDirs, delegate(XmlDocument doc) {
+        string[] result = mParser.ParsePropFindResponseForDirectories(doc, "/webgac/");
+        Assert.AreEqual(0, result.Length);
+      });
     }
 
     [Test]
     public void ShouldReturnValidListOfFiles() {
-      XmlDocument doc = new XmlDocument();
-      doc.LoadXml(sValidFileList);
+      ForEachFormat(sValidFileList, delegate(XmlDocument doc) {
+        string[] result = mParser.ParsePropFindResponseForFiles(doc, "/webgac/MetaSharp.Web.APIs/0.1.7338.1_Debug/");
+        Assert.AreEqual(2, result.Length);
+        Assert.AreEqual("MetaSharp.Web.APIs.dll", result[0]);
+        Assert.AreEqual("MetaSharp.Web.APIs.pdb", result[1]);
+      });
+    }
 
-      string[] result = mParser.ParsePropFindResponseForFiles(doc, "/webgac/MetaSharp.Web.APIs/0.1.7338.1_Debug/");
-      Assert.AreEqual(2, result.Length);
-      Assert.AreEqual("MetaSharp.Web.APIs.dll", result[0]);
-      Assert.AreEqual("MetaSharp.Web.APIs.pdb", result[1]);
+    private delegate void FormatTester(XmlDocument doc);
+    private void ForEachFormat(string content, FormatTester tester) {
+      // Test for Apache style output (no hostname in hrefs)
+      XmlDocument apacheDoc = new XmlDocument();
+      apacheDoc.LoadXml(content);
+      tester(apacheDoc);
+
+      // Test for IIS style output (hostname in hrefs)
+      XmlDocument iisDoc = new XmlDocument();
+      iisDoc.LoadXml(content.Replace("/webgac", "http://localhost/webgac"));
+      tester(iisDoc);
     }
 
     private const string sValidPropertyListWithOneDir =
