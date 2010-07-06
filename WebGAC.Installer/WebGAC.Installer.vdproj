@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0A89C9EA40C2B5AB648D9C7F71B2BF59"
+        "OwnerKey" = "8:_22FA944DD630B03AB80554C3B2C1E870"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_13186B7A839A64958488BE05960E832A"
+        "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1A2E79E520245F1BEE7495348D00EF72"
         "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
         "MsmSig" = "8:_UNDEFINED"
@@ -45,14 +57,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3B667B90A68AEB01159231654B5D2C33"
-        "OwnerKey" = "8:_E9485CF398CCA1F376EFCEE884BF0911"
+        "MsmKey" = "8:_4C6E83E0A179F3661B9B25632F664A81"
+        "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_482B5E57776EE35B0A47C6C1E6CFA397"
-        "OwnerKey" = "8:_73BF86DADAFCB5C110AA88E78D0FC03C"
+        "MsmKey" = "8:_4C6E83E0A179F3661B9B25632F664A81"
+        "OwnerKey" = "8:_13186B7A839A64958488BE05960E832A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4C6E83E0A179F3661B9B25632F664A81"
+        "OwnerKey" = "8:_C8BB0879314C54F461233FA7F62D9E08"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,26 +81,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_73BF86DADAFCB5C110AA88E78D0FC03C"
+        "MsmKey" = "8:_75BFCC3BD3DE490C84A3A3F4BB6B5527"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_75F90CD4F0E8515F0CD82506CB1679F3"
         "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_73BF86DADAFCB5C110AA88E78D0FC03C"
-        "OwnerKey" = "8:_E9485CF398CCA1F376EFCEE884BF0911"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_73BF86DADAFCB5C110AA88E78D0FC03C"
-        "OwnerKey" = "8:_C02CCFE950316D052E684CAB5BD29E0D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_75BFCC3BD3DE490C84A3A3F4BB6B5527"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_75F90CD4F0E8515F0CD82506CB1679F3"
+        "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -99,62 +111,44 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A63B4032129D799BEB044CBAEFFD7830"
-        "OwnerKey" = "8:_22FA944DD630B03AB80554C3B2C1E870"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BE9EA49FAF0E4E583F04866688A312F0"
+        "MsmKey" = "8:_86C8B58810DF792207B4BE0550598B42"
         "OwnerKey" = "8:_1A2E79E520245F1BEE7495348D00EF72"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C02CCFE950316D052E684CAB5BD29E0D"
+        "MsmKey" = "8:_894C4C3A2D59C6F568AFE7A44EC9B705"
+        "OwnerKey" = "8:_13186B7A839A64958488BE05960E832A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C8BB0879314C54F461233FA7F62D9E08"
         "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C02CCFE950316D052E684CAB5BD29E0D"
-        "OwnerKey" = "8:_E9485CF398CCA1F376EFCEE884BF0911"
+        "MsmKey" = "8:_C8BB0879314C54F461233FA7F62D9E08"
+        "OwnerKey" = "8:_13186B7A839A64958488BE05960E832A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D769BFED431D50705E09BC7FA6049267"
+        "MsmKey" = "8:_CAE2AC9EA922AA8D4E80370572332EA8"
+        "OwnerKey" = "8:_4C6E83E0A179F3661B9B25632F664A81"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F18B92D42A822FEFDD3ABB835989C7A1"
         "OwnerKey" = "8:_2132BAF8BF5A5958EE90A2C6C96903F6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E9485CF398CCA1F376EFCEE884BF0911"
-        "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
-        "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
-        "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -184,19 +178,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E9485CF398CCA1F376EFCEE884BF0911"
+        "OwnerKey" = "8:_75F90CD4F0E8515F0CD82506CB1679F3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C02CCFE950316D052E684CAB5BD29E0D"
+        "OwnerKey" = "8:_13186B7A839A64958488BE05960E832A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_73BF86DADAFCB5C110AA88E78D0FC03C"
+        "OwnerKey" = "8:_C8BB0879314C54F461233FA7F62D9E08"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4C6E83E0A179F3661B9B25632F664A81"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -295,6 +295,57 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0A89C9EA40C2B5AB648D9C7F71B2BF59"
+            {
+            "SourcePath" = "8:vsmso.olb"
+            "TargetName" = "8:vsmso.olb"
+            "Tag" = "8:"
+            "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_13186B7A839A64958488BE05960E832A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:VSLangProj80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_13186B7A839A64958488BE05960E832A"
+                    {
+                    "Name" = "8:VSLangProj80.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:VSLangProj80.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1A2E79E520245F1BEE7495348D00EF72"
             {
             "AssemblyRegister" = "3:1"
@@ -408,30 +459,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B667B90A68AEB01159231654B5D2C33"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4C6E83E0A179F3661B9B25632F664A81"
             {
-            "SourcePath" = "8:vslangproj80.olb"
-            "TargetName" = "8:vslangproj80.olb"
-            "Tag" = "8:"
-            "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_482B5E57776EE35B0A47C6C1E6CFA397"
-            {
-            "SourcePath" = "8:vslangproj.olb"
-            "TargetName" = "8:vslangproj.olb"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_4C6E83E0A179F3661B9B25632F664A81"
+                    {
+                    "Name" = "8:VSLangProj.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:VSLangProj.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
             "Condition" = "8:"
@@ -468,23 +510,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_73BF86DADAFCB5C110AA88E78D0FC03C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_75F90CD4F0E8515F0CD82506CB1679F3"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+            "AssemblyAsmDisplayName" = "8:WebGAC.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_73BF86DADAFCB5C110AA88E78D0FC03C"
+                    "_75F90CD4F0E8515F0CD82506CB1679F3"
                     {
-                    "Name" = "8:VSLangProj.dll"
+                    "Name" = "8:WebGAC.Core.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:VSLangProj.dll"
+            "SourcePath" = "8:WebGAC.Core.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
+            "Folder" = "8:_97728C6831DF4A3AB0258AC233397D3A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -495,31 +537,11 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A63B4032129D799BEB044CBAEFFD7830"
-            {
-            "SourcePath" = "8:vsmso.olb"
-            "TargetName" = "8:vsmso.olb"
-            "Tag" = "8:"
-            "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BE9EA49FAF0E4E583F04866688A312F0"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_86C8B58810DF792207B4BE0550598B42"
             {
             "SourcePath" = "8:dte80.olb"
             "TargetName" = "8:dte80.olb"
@@ -539,14 +561,34 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C02CCFE950316D052E684CAB5BD29E0D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_894C4C3A2D59C6F568AFE7A44EC9B705"
+            {
+            "SourcePath" = "8:vslangproj80.olb"
+            "TargetName" = "8:vslangproj80.olb"
+            "Tag" = "8:"
+            "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C8BB0879314C54F461233FA7F62D9E08"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:VSLangProj2, Version=7.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_C02CCFE950316D052E684CAB5BD29E0D"
+                    "_C8BB0879314C54F461233FA7F62D9E08"
                     {
                     "Name" = "8:VSLangProj2.dll"
                     "Attributes" = "3:512"
@@ -570,7 +612,27 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D769BFED431D50705E09BC7FA6049267"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CAE2AC9EA922AA8D4E80370572332EA8"
+            {
+            "SourcePath" = "8:vslangproj.olb"
+            "TargetName" = "8:vslangproj.olb"
+            "Tag" = "8:"
+            "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F18B92D42A822FEFDD3ABB835989C7A1"
             {
             "SourcePath" = "8:dte80a.olb"
             "TargetName" = "8:dte80a.olb"
@@ -587,68 +649,6 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E9485CF398CCA1F376EFCEE884BF0911"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VSLangProj80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_E9485CF398CCA1F376EFCEE884BF0911"
-                    {
-                    "Name" = "8:VSLangProj80.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:VSLangProj80.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_ABB9EE85875B4311A3723AF4D7A9B9E2"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FB1D0E601B28CBE43309B4EFA7439B73"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:WebGAC.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_FB1D0E601B28CBE43309B4EFA7439B73"
-                    {
-                    "Name" = "8:WebGAC.Core.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:WebGAC.Core.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_97728C6831DF4A3AB0258AC233397D3A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -753,14 +753,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:WebGAC"
-        "ProductCode" = "8:{09F27944-8FA6-4A33-BCBA-D714F3BC95C5}"
-        "PackageCode" = "8:{BD03EFC4-0A0E-45FA-8752-06FD281998EA}"
+        "ProductCode" = "8:{1736F686-C726-4EEA-8F3A-097A8DB46C75}"
+        "PackageCode" = "8:{735F31D4-BB61-47E6-BAC6-32E495330E7C}"
         "UpgradeCode" = "8:{64E45243-C2D7-47ED-B57A-DB13F7B9A861}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.10.0304"
+        "ProductVersion" = "8:1.10.0706"
         "Manufacturer" = "8:Default Company Name"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -885,6 +885,92 @@
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
                                                                     "Value" = "8:[ProgramFilesFolder]MSBuild\\WebGAC\\WebGAC.targets"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_6B467F7AC4A94C9ABA54D8A99D6D5F5E"
+                                            {
+                                            "Name" = "8:10.0"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_4683EFFECA974A77895644E100F22C27"
+                                                    {
+                                                    "Name" = "8:MSBuild"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_03B1A390DD1E4E659B56E08CCDBCDF5C"
+                                                            {
+                                                            "Name" = "8:SafeImports"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_3442AC3179D7480DA6709538E3EDBFC1"
+                                                                    {
+                                                                    "Name" = "8:MSBuild"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:[ProgramFilesFolder]MSBuild\\WebGAC\\WebGAC.targets"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_E60912640C8B43108881A42EFDEA497E"
+                                                    {
+                                                    "Name" = "8:AutomationOptions"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F5D13A67607F4D33AB6BDFD71C68D5D9"
+                                                            {
+                                                            "Name" = "8:LookInFolders"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_74324D355BA547E2A6BA4C770AD5C985"
+                                                                    {
+                                                                    "Name" = "8:[TARGETDIR]"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:WebGAC"
                                                                     }
                                                                 }
                                                             }
