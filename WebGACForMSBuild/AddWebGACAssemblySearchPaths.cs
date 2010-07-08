@@ -51,7 +51,6 @@ namespace WebGAC.MSBuild {
     /// <summary>
     /// The current build configuration.
     /// </summary>
-    [Required]
     public string PrimaryConfiguration {
       get { return mPrimaryConfiguration; }
       set { mPrimaryConfiguration = value; }
@@ -75,7 +74,12 @@ namespace WebGAC.MSBuild {
     public override bool Execute() {
       List<string> updatedSearchPaths = new List<string>();
       IDictionary<string, object> webGACSearchPaths = new Dictionary<string, object>();
-      
+
+      // Default the primary configuration if it hasn't been set
+      if (mPrimaryConfiguration == null) {
+          mPrimaryConfiguration = mAllConfigurations[0];
+      }        
+
       if (mAssemblies != null) {
         foreach (ITaskItem item in mAssemblies) {
           try {
