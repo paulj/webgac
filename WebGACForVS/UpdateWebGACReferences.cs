@@ -38,7 +38,7 @@ namespace WebGACForVS {
       
       // Add an item for each of our references
       foreach (Reference reference in mReferences) {
-        ListViewItem item = new ListViewItem(reference.Identity);
+        ListViewItem item = new ListViewItem(reference.Name);
         item.SubItems.Add(reference.Version);
         item.SubItems.Add("Checking...", Color.Gray, Color.White, item.Font);
 
