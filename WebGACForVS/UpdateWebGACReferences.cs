@@ -18,10 +18,10 @@ namespace WebGACForVS {
     private readonly WebGAC.Core.WebGAC mGac;
     private readonly string mCurrentConfiguration;
     private readonly string[] mAllConfigurations;
-    private readonly Reference3[] mReferences;
+    private readonly Reference[] mReferences;
     private Thread mUpdateThread;
 
-    public UpdateWebGACReferences(DTE2 pApplication, WebGAC.Core.WebGAC pGac, string pCurrentConfiguration, string[] pAllConfigurations, params Reference3[] pReferences) {
+    public UpdateWebGACReferences(DTE2 pApplication, WebGAC.Core.WebGAC pGac, string pCurrentConfiguration, string[] pAllConfigurations, params Reference[] pReferences) {
       InitializeComponent();
 
       mApplication = pApplication;
@@ -37,7 +37,7 @@ namespace WebGACForVS {
       referenceListView.Columns.Add("Selected Version");
       
       // Add an item for each of our references
-      foreach (Reference3 reference in mReferences) {
+      foreach (Reference reference in mReferences) {
         ListViewItem item = new ListViewItem(reference.Identity);
         item.SubItems.Add(reference.Version);
         item.SubItems.Add("Checking...", Color.Gray, Color.White, item.Font);
@@ -59,22 +59,23 @@ namespace WebGACForVS {
     private void okButton_Click(object sender, EventArgs e) {
       for (int i = 0; i < mReferences.Length; ++i) {
         Version selected = (Version) referenceListView.Items[i].SubItems[2].Tag;
-        Version curVersion = new Version(mReferences[i].Version);
-        Reference3 reference = mReferences[i];
+
+        Version curVersion = new Version(mReferences[i].Version == string.Empty ? "0.0.0.0" : mReferences[i].Version);
+        Reference reference = mReferences[i];
         string name = reference.Name;
         
         // Work out if we're updating the reference or not.
         if (selected != null && !curVersion.Equals(selected)) {
-          List<Reference3> updateReferences = new List<Reference3>();
+          List<Reference> updateReferences = new List<Reference>();
           updateReferences.Add(reference); // Always update our reference
 
           // Check if any other projects in the solution use this reference
-          VSProject2 vsProj = (VSProject2)mReferences[i].ContainingProject.Object;
-          Reference3[] otherReferences = FindReferenceInOtherProjects(reference.Name, vsProj.Project.UniqueName);
+          VSProject vsProj = (VSProject)mReferences[i].ContainingProject.Object;
+          Reference[] otherReferences = FindReferenceInOtherProjects(reference.Name, vsProj.Project.UniqueName);
           if (otherReferences.Length > 0) {
             StringBuilder message = new StringBuilder();
             message.AppendFormat("The following projects also have references to {0}:\n", name);
-            foreach (Reference3 otherRef in otherReferences) {
+            foreach (Reference otherRef in otherReferences) {
               message.AppendFormat("  {0}\n", otherRef.ContainingProject.Name);
             }
             message.Append("Do you wish to update the reference in these projects too?");
@@ -89,8 +90,8 @@ namespace WebGACForVS {
             }
           }
 
-          foreach (Reference3 updateRef in updateReferences) {
-            VSProject2 owner = (VSProject2)updateRef.ContainingProject.Object;
+          foreach (Reference updateRef in updateReferences) {
+            VSProject owner = (VSProject)updateRef.ContainingProject.Object;
 
             updateRef.Remove();
             owner.References.Add(mGac.Resolve(name, selected, null, null, mCurrentConfiguration, mAllConfigurations));
@@ -129,13 +130,15 @@ namespace WebGACForVS {
     }
 
     private void referenceListView_DoubleClick(object sender, EventArgs e) {
-      Reference3 clickedReference = mReferences[referenceListView.SelectedIndices[0]];
+      Reference clickedReference = mReferences[referenceListView.SelectedIndices[0]];
 
       EditReference edit = new EditReference(mGac, clickedReference.Name, true);
       if (edit.ShowDialog(this) == System.Windows.Forms.DialogResult.OK) {
         // We need to update the reference
         referenceListView.SelectedItems[0].SubItems[2].Text = edit.SelectedVersion.ToString();
         referenceListView.SelectedItems[0].SubItems[2].Tag = edit.SelectedVersion;
+
+        UpdateOkButtonState();
       }
     }
 
@@ -153,14 +156,14 @@ namespace WebGACForVS {
       okButton.Enabled = shouldEnable;
     }
 
-    private Reference3[] FindReferenceInOtherProjects(string pRefName, string pExcludesProjectName) {
-      List<Reference3> result = new List<Reference3>();
+    private Reference[] FindReferenceInOtherProjects(string pRefName, string pExcludesProjectName) {
+      List<Reference> result = new List<Reference>();
 
       for (int i = 1; i <= mApplication.Solution.Projects.Count; ++i) {
         Project proj = mApplication.Solution.Projects.Item(i);
 
-        if (proj.UniqueName != pExcludesProjectName && proj.Object is VSProject2) {
-          VSProject2 vsProj = (VSProject2)proj.Object;
+        if (proj.UniqueName != pExcludesProjectName && proj.Object is VSProject) {
+          VSProject vsProj = (VSProject)proj.Object;
         
           result.AddRange(GetReferences(vsProj, pRefName));
         } else if (proj.Kind.Equals("{66A26720-8FB5-11D2-AA7E-00C04F688DDE}")) {
@@ -172,8 +175,8 @@ namespace WebGACForVS {
       return result.ToArray();
     }
 
-    private Reference3[] FindReferencesInFolderItem(Project pProjItem, string pRefName, string pExcludesProjectName) {
-      List<Reference3> result = new List<Reference3>();
+    private Reference[] FindReferencesInFolderItem(Project pProjItem, string pRefName, string pExcludesProjectName) {
+      List<Reference> result = new List<Reference>();
 
       for (int i = 1; i <= pProjItem.ProjectItems.Count; ++i) {
         ProjectItem projItem = pProjItem.ProjectItems.Item(i);
@@ -181,8 +184,8 @@ namespace WebGACForVS {
         if (projItem.SubProject != null) {
           Project proj = projItem.SubProject;
 
-          if (proj.UniqueName != pExcludesProjectName && proj.Object is VSProject2) {
-            VSProject2 vsProj = (VSProject2)proj.Object;
+          if (proj.UniqueName != pExcludesProjectName && proj.Object is VSProject) {
+            VSProject vsProj = (VSProject)proj.Object;
 
             result.AddRange(GetReferences(vsProj, pRefName));
           } else if (proj.Kind.Equals("{66A26720-8FB5-11D2-AA7E-00C04F688DDE}")) {
@@ -195,12 +198,12 @@ namespace WebGACForVS {
       return result.ToArray();
     }
 
-    private Reference3[] GetReferences(VSProject2 pVsProj, string pRefName) {
-      List<Reference3> result = new List<Reference3>();
+    private Reference[] GetReferences(VSProject pVsProj, string pRefName) {
+      List<Reference> result = new List<Reference>();
 
       // See if it has our reference
       for (int j = 1; j <= pVsProj.References.Count; ++j) {
-        Reference3 reference = (Reference3) pVsProj.References.Item(j);
+        Reference reference = (Reference) pVsProj.References.Item(j);
 
         if (reference.Name == pRefName) {
           result.Add(reference);

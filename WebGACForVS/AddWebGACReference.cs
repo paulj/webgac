@@ -6,17 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using VSLangProj;
 using VSLangProj80;
 
 namespace WebGACForVS {
   public partial class AddWebGACReference : Form {
-    private readonly VSProject2 mVsProj;
+    private readonly VSProject mVsProj;
     private readonly WebGAC.Core.WebGAC mGac;
     private readonly string mCurrentConfiguration;
     private readonly string[] mAllConfigurations;
     private Thread mLoadThread;
 
-    public AddWebGACReference(WebGAC.Core.WebGAC pGac, VSProject2 pVsProj, string pCurrentConfiguration, string[] pAllConfigurations) {
+    public AddWebGACReference(WebGAC.Core.WebGAC pGac, VSProject pVsProj, string pCurrentConfiguration, string[] pAllConfigurations) {
       InitializeComponent();
 
       mVsProj = pVsProj;
@@ -171,8 +172,11 @@ namespace WebGACForVS {
       }
 
       try {
-        Reference3 reference = (Reference3) mVsProj.References.Add(refPath);
-        reference.SpecificVersion = true;
+        Reference added = mVsProj.References.Add(refPath);
+        if (added is Reference3) {
+          Reference3 reference = (Reference3) added;
+          reference.SpecificVersion = true;
+        }
         return true;
       } catch (Exception ex) {
         Invoke((ThreadStart) delegate {
