@@ -87,18 +87,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_75F90CD4F0E8515F0CD82506CB1679F3"
-        "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_75F90CD4F0E8515F0CD82506CB1679F3"
-        "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -147,6 +135,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
+        "OwnerKey" = "8:_7DFA66EC78B648E19F2D001D9A076E1A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
+        "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7E74B485CC3B4A74A27F41C6EBFB57CD"
         "MsmSig" = "8:_UNDEFINED"
@@ -178,12 +178,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_75F90CD4F0E8515F0CD82506CB1679F3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_13186B7A839A64958488BE05960E832A"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -197,6 +191,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_4C6E83E0A179F3661B9B25632F664A81"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FB1D0E601B28CBE43309B4EFA7439B73"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -510,37 +510,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_75F90CD4F0E8515F0CD82506CB1679F3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:WebGAC.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_75F90CD4F0E8515F0CD82506CB1679F3"
-                    {
-                    "Name" = "8:WebGAC.Core.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:WebGAC.Core.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_97728C6831DF4A3AB0258AC233397D3A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_86C8B58810DF792207B4BE0550598B42"
             {
             "SourcePath" = "8:dte80.olb"
@@ -652,6 +621,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FB1D0E601B28CBE43309B4EFA7439B73"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:WebGAC.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FB1D0E601B28CBE43309B4EFA7439B73"
+                    {
+                    "Name" = "8:WebGAC.Core.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:WebGAC.Core.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_97728C6831DF4A3AB0258AC233397D3A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -753,18 +753,18 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:WebGAC"
-        "ProductCode" = "8:{1736F686-C726-4EEA-8F3A-097A8DB46C75}"
-        "PackageCode" = "8:{735F31D4-BB61-47E6-BAC6-32E495330E7C}"
+        "ProductCode" = "8:{C1A7149A-3858-44FE-81F1-530D485E8627}"
+        "PackageCode" = "8:{85008D40-EEEA-4E48-9DFC-CC6B75F76394}"
         "UpgradeCode" = "8:{64E45243-C2D7-47ED-B57A-DB13F7B9A861}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.10.0706"
+        "ProductVersion" = "8:1.10.1111"
         "Manufacturer" = "8:Default Company Name"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:WebGAC 20100304"
+        "Title" = "8:WebGAC 20101111"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Paul Jones"
         "Keywords" = "8:"
@@ -1446,7 +1446,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_75BFCC3BD3DE490C84A3A3F4BB6B5527"
             {
-            "SourcePath" = "8:..\\WebGAC.Core\\obj\\Release\\WebGAC.Core.dll"
+            "SourcePath" = "8:..\\WebGAC.Core\\obj\\Debug\\WebGAC.Core.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B00C887289844922A2296DE1267EE612"
@@ -1474,7 +1474,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7DFA66EC78B648E19F2D001D9A076E1A"
             {
-            "SourcePath" = "8:..\\WebGACForVS\\obj\\Release\\WebGACForVS.dll"
+            "SourcePath" = "8:..\\WebGACForVS\\obj\\Debug\\WebGACForVS.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_97728C6831DF4A3AB0258AC233397D3A"
@@ -1502,7 +1502,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7E74B485CC3B4A74A27F41C6EBFB57CD"
             {
-            "SourcePath" = "8:..\\WebGACForMSBuild\\obj\\Release\\WebGAC.MSBuild.dll"
+            "SourcePath" = "8:..\\WebGACForMSBuild\\obj\\Debug\\WebGAC.MSBuild.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B00C887289844922A2296DE1267EE612"
