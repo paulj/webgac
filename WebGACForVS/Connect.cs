@@ -28,7 +28,7 @@ namespace WebGACForVS
 
         private static void AddCommand(Commands2 c, AddIn a, object[] o, string name, string display, string tip)
         {
-            c.AddNamedCommand2(a, name, display, tip, true, 59, ref o, StatusSupported + StatusEnabled, StyleText);
+            c.AddNamedCommand2(a, name, display, tip, true, 59, ref o, StatusSupported + StatusEnabled, StyleText, vsCommandControlType.vsCommandControlTypeButton);
         }
 
         private const string Root = "WebGACForVS.Connect.";
@@ -163,7 +163,7 @@ namespace WebGACForVS
                         var commandBarButton = it.Current as CommandBarButton;
                         if (null != commandBarButton)                        
                         {
-                            var name = commandBarButton.get_accName();
+                            var name = commandBarButton.get_accName(0);
                             if (name != null && name.Contains(commandNameToLabel[item.Key]))
                             {
                                 primed = true;
@@ -191,7 +191,7 @@ namespace WebGACForVS
 
 	        foreach (CommandBarControl control in cmdBar.Controls)
 	        {
-	            var name = control.get_accName(); 
+	            var name = control.get_accName(0); 
 	            if (null != name)
 	            {
 	                if (name.Contains(commandNameToLabel[candidate]))
