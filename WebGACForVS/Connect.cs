@@ -507,7 +507,11 @@ namespace WebGACForVS
       if (pHItem.Object is Project) {
         return (Project)pHItem.Object;
       } else if (pHItem.Object is ProjectItem) {
-        return ((ProjectItem)pHItem.Object).ContainingProject;
+        if (((ProjectItem)pHItem.Object).SubProject != null) {
+          return ((ProjectItem)pHItem.Object).SubProject;
+        } else {
+            return ((ProjectItem)pHItem.Object).ContainingProject;
+        }
       } else if (pHItem.Collection.Parent is UIHierarchyItem) {
         return FindProject(pItem, (UIHierarchyItem) pHItem.Collection.Parent);
       }
