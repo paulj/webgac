@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGACForMSBuild", "WebGACForMSBuild\WebGACForMSBuild.csproj", "{CD4E6159-9B92-44AF-BD6A-AB757EA4A6A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGAC.Core", "WebGAC.Core\WebGAC.Core.csproj", "{E880B181-4A31-4C97-8E9D-2F9EFDFD1281}"
